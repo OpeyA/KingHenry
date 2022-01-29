@@ -1,0 +1,214 @@
+body {
+  background-color: rgb(197, 176, 148);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 15em);
+  grid-template-rows: 3.2em 15em 15em 15em 15em;
+  grid-template-areas:
+    "head head"
+    "wife1 wife2"
+    "king king"
+    "wife3 wife4"
+    "wife5 wife6";
+  grid-gap: 0.375em;
+
+  width: 31em;
+  /*496px*/
+  margin: auto;
+}
+
+.wrapper>* {
+  overflow: hidden;
+  position: relative;
+  /* outline: solid 0.25em black; */
+}
+
+.title {
+  grid-area: head;
+  text-align: center;
+  font-family: "Mystery Quest", cursive;
+  padding-top: 0.625em;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: 1.5px;
+  text-shadow: 0.06em 0.06em 0.1em rgba(245, 245, 245, 0.842);
+}
+
+.picture {
+  width: 100%;
+  border: groove 0.15em goldenrod;
+  box-shadow: 0.0625em 0.0625em black;
+}
+
+.CatherineAragon {
+  grid-area: wife1;
+}
+
+.CatherineAragon img {
+  filter: contrast(87%) brightness(90%);
+}
+
+.AnneBoleyn {
+  grid-area: wife2;
+}
+
+.JaneSeymour {
+  grid-area: wife3;
+}
+
+.Henry {
+  grid-area: king;
+}
+
+.AnnCleves {
+  grid-area: wife4;
+}
+
+.CatherineHoward {
+  grid-area: wife5;
+}
+
+.CatherineHoward img {
+  filter: brightness(1);
+}
+
+.CatherineParr {
+  grid-area: wife6;
+}
+
+.CatherineParr img {
+  filter: contrast(87%) brightness(95%);
+}
+
+figcaption {
+  opacity: 0;
+}
+
+.picture:hover figcaption {
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: whitesmoke;
+  width: 100%;
+  padding: 0.5em 0em;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Mystery Quest", cursive;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  background-color: rgba(7, 7, 7, 0.658);
+}
+
+.Henry:hover figcaption {
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: whitesmoke;
+  width: 100%;
+  padding: 0.5em 0em;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Mystery Quest", cursive;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  background-color: rgba(185, 145, 42, 0.658);
+}
+
+img {
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 15em);
+    grid-template-rows: 4.5em 18em 23em 18em;
+    grid-template-areas:
+      "head head head"
+      "wife1 wife2 wife3"
+      "king king king"
+      "wife4 wife5 wife6";
+    grid-gap: 0.5em;
+
+    /* width: 46em; 736px*/
+    width: clamp(45em, 46em, 46.8em);
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 3em;
+    letter-spacing: 1.5px;
+  }
+
+  .JaneSeymour img {
+    margin-top: -3%;
+  }
+
+  .CatherineParr img {
+    margin-top: -2%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 15em);
+    grid-template-rows: 4.5em 15em 15em;
+    grid-template-areas:
+      "head head head head"
+      "wife1 king king wife2"
+      "wife3 wife4 wife5 wife6";
+    grid-gap: 0.5em;
+
+    width: 62em;
+    /*992px*/
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 3em;
+    letter-spacing: 1.5px;
+  }
+
+  .CatherineHoward img {
+    margin-top: -3%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 15em);
+    grid-template-rows: 15em 15em 15em;
+    grid-template-areas:
+      /* the dots (.) represent empty cells*/
+      "wife1 wife2 wife3 head head"
+      ". king king . ."
+      ". . wife4 wife5 wife6";
+    grid-gap: 1em;
+
+    width: 75em;
+    /*1200px*/
+    margin: auto;
+    padding-top: 1.5em;
+  }
+
+  h1 {
+    font-size: 2.275em;
+    letter-spacing: 1.5px;
+  }
+
+  .title {
+    padding-top: 6em;
+  }
+
+  .AnneBoleyn img {
+    margin-top: -1.5%;
+  }
+}
